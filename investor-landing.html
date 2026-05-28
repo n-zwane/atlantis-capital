@@ -1,0 +1,2260 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Atlantis Capital — Africa's Green Industrial Future</title>
+        <meta
+            name="description"
+            content="The Atlantis Special Economic Zone is South Africa's leading green manufacturing hub. Explore live impact data, investment opportunities, and the story of a community being transformed by the green economy."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <link rel="stylesheet" href="investor-landing.css" />
+    </head>
+    <body>
+        <!-- ═══════════════════════════════════════════════════════════ NAVBAR ═══ -->
+        <header class="inv-nav" id="invNav">
+            <div class="inv-nav-inner">
+                <a
+                    href="index.html"
+                    class="inv-brand"
+                    aria-label="Atlantis Capital Home"
+                >
+                    <img
+                        src="logo.png"
+                        alt=""
+                        class="inv-brand-logo"
+                        onerror="this.style.display = 'none'"
+                    />
+                    <span class="inv-brand-name">Atlantis Capital</span>
+                </a>
+
+                <nav
+                    class="inv-nav-links"
+                    id="invNavLinks"
+                    aria-label="Page sections"
+                >
+                    <a href="#story" class="inv-nav-link" data-section="story"
+                        >The Story</a
+                    >
+                    <a href="#data" class="inv-nav-link" data-section="data"
+                        >The Data</a
+                    >
+                    <a
+                        href="#sustainability"
+                        class="inv-nav-link"
+                        data-section="sustainability"
+                        >Sustainability</a
+                    >
+                    <a
+                        href="#opportunity"
+                        class="inv-nav-link"
+                        data-section="opportunity"
+                        >Opportunity</a
+                    >
+                    <a href="#zone" class="inv-nav-link" data-section="zone"
+                        >The Zone</a
+                    >
+                </nav>
+
+                <div class="inv-nav-actions">
+                    <a href="portal.html" class="inv-btn-ghost">Login</a>
+                    <a href="portal.html" class="inv-btn-solid"
+                        >Create Investor Account</a
+                    >
+                </div>
+
+                <button
+                    class="inv-hamburger"
+                    id="invHamburger"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Mobile full-screen overlay nav -->
+        <div
+            class="inv-mobile-overlay"
+            id="invMobileOverlay"
+            aria-hidden="true"
+        >
+            <nav class="inv-mobile-nav">
+                <a
+                    href="#story"
+                    class="inv-mobile-link"
+                    onclick="closeMobileNav()"
+                    >The Story</a
+                >
+                <a
+                    href="#data"
+                    class="inv-mobile-link"
+                    onclick="closeMobileNav()"
+                    >The Data</a
+                >
+                <a
+                    href="#sustainability"
+                    class="inv-mobile-link"
+                    onclick="closeMobileNav()"
+                    >Sustainability</a
+                >
+                <a
+                    href="#opportunity"
+                    class="inv-mobile-link"
+                    onclick="closeMobileNav()"
+                    >The Opportunity</a
+                >
+                <a
+                    href="#zone"
+                    class="inv-mobile-link"
+                    onclick="closeMobileNav()"
+                    >The Zone</a
+                >
+                <div class="inv-mobile-actions">
+                    <a
+                        href="portal.html"
+                        class="inv-btn-ghost inv-btn-full"
+                        onclick="closeMobileNav()"
+                        >Login</a
+                    >
+                    <a
+                        href="portal.html"
+                        class="inv-btn-solid inv-btn-full"
+                        onclick="closeMobileNav()"
+                        >Create Investor Account</a
+                    >
+                </div>
+            </nav>
+        </div>
+
+        <main>
+            <!-- ═══════════════════════════════════════════════════════════ HERO ═══ -->
+            <section class="inv-hero" id="hero">
+                <video
+                    class="inv-hero-video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    poster="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1920&q=80"
+                >
+                    <source
+                        src="https://assets.mixkit.co/videos/preview/mixkit-wind-turbines-generating-electricity-in-a-field-43285-large.mp4"
+                        type="video/mp4"
+                    />
+                </video>
+                <div class="inv-hero-overlay"></div>
+
+                <div class="inv-hero-content">
+                    <h1 class="inv-hero-headline">
+                        Where Africa's Green<br />Industrial Future<br /><em
+                            >Is Being Built</em
+                        >
+                    </h1>
+                    <p class="inv-hero-sub">
+                        The Atlantis SEZ is transforming a post-industrial
+                        community into the continent's leading green
+                        manufacturing hub — 50 km north of Cape Town, where
+                        infrastructure, skills, and purpose converge.
+                    </p>
+
+                    <div class="inv-hero-stats" id="heroStats">
+                        <div class="inv-hero-stat">
+                            <span
+                                class="inv-stat-num"
+                                data-target="47"
+                                data-suffix="+"
+                                >0</span
+                            >
+                            <span class="inv-stat-lbl"
+                                >Green Companies Established</span
+                            >
+                        </div>
+                        <div class="inv-hero-stat">
+                            <span
+                                class="inv-stat-num"
+                                data-target="12400"
+                                data-suffix=""
+                                >0</span
+                            >
+                            <span class="inv-stat-lbl"
+                                >Jobs Targeted by 2030</span
+                            >
+                        </div>
+                        <div class="inv-hero-stat">
+                            <span
+                                class="inv-stat-num"
+                                data-prefix="R"
+                                data-target="8.2"
+                                data-suffix="bn"
+                                >0</span
+                            >
+                            <span class="inv-stat-lbl"
+                                >Investment Committed</span
+                            >
+                        </div>
+                        <div class="inv-hero-stat">
+                            <span
+                                class="inv-stat-num"
+                                data-target="84"
+                                data-suffix="%"
+                                >0</span
+                            >
+                            <span class="inv-stat-lbl"
+                                >Renewable Energy Sourced</span
+                            >
+                        </div>
+                    </div>
+
+                    <div class="inv-hero-ctas">
+                        <a href="#opportunity" class="inv-cta-primary">
+                            <i data-feather="trending-up"></i>
+                            See Investment Cases
+                        </a>
+                        <a href="#data" class="inv-cta-secondary">
+                            <i data-feather="bar-chart-2"></i>
+                            View Live Impact Data
+                        </a>
+                    </div>
+                </div>
+
+                <div class="inv-scroll-hint" aria-hidden="true">
+                    <span class="inv-chevron"></span>
+                    <span class="inv-chevron"></span>
+                </div>
+            </section>
+
+            <!-- ═══════════════════════════════════════════════════════════ STORY ═══ -->
+            <section class="inv-story" id="story">
+                <div class="inv-section-label animate-up">
+                    THE STORY OF ATLANTIS
+                </div>
+
+                <div class="inv-story-chapter animate-up" id="chapter1">
+                    <div class="inv-chapter-marker">
+                        <span class="inv-chapter-num">01</span>
+                        <span class="inv-chapter-title"
+                            >Origins &amp; Challenge</span
+                        >
+                    </div>
+                    <div class="inv-chapter-body">
+                        <div class="inv-chapter-text">
+                            <h2>
+                                A town built for exclusion.<br />A community
+                                that endured.
+                            </h2>
+                            <p>
+                                Atlantis was established in the 1970s under
+                                apartheid's Group Areas Act — an industrial
+                                township deliberately placed far from Cape
+                                Town's economic centre, designed to house
+                                Coloured workers at a distance from the city
+                                they built. When the manufacturing sector
+                                collapsed in the 1980s, the town was left behind
+                                with an unemployment rate that peaked above 80
+                                percent.
+                            </p>
+                            <p>
+                                What followed was decades of poverty, social
+                                instability, and a profound sense of abandonment
+                                by the systems that created the town. But the
+                                community remained. The work ethic, the
+                                manufacturing knowledge, and the industrial
+                                infrastructure did not disappear — they waited.
+                            </p>
+                        </div>
+                        <div class="inv-chapter-callout">
+                            <span class="inv-callout-num"
+                                >80<small>%</small></span
+                            >
+                            <span class="inv-callout-lbl"
+                                >Peak unemployment rate in Atlantis before SEZ
+                                designation — the injustice the zone was built
+                                to reverse.</span
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inv-story-divider"></div>
+
+                <div class="inv-story-chapter animate-up" id="chapter2">
+                    <div class="inv-chapter-marker">
+                        <span class="inv-chapter-num">02</span>
+                        <span class="inv-chapter-title">The Turning Point</span>
+                    </div>
+                    <div class="inv-chapter-body">
+                        <div class="inv-chapter-text">
+                            <h2>The designation that changed everything.</h2>
+                            <p>
+                                In 2015, the South African government recognised
+                                what others had missed: Atlantis already had the
+                                bones of a world-class industrial node.
+                                Proximity to the Port of Cape Town. Access to
+                                the N7 corridor. Proximity to Koeberg. A
+                                community with deep manufacturing heritage. A
+                                fully serviced industrial area ready for
+                                investment.
+                            </p>
+                            <p>
+                                The SEZ designation unlocked the framework for a
+                                deliberate industrial transition — one focused
+                                specifically on green technology, renewable
+                                energy manufacturing, and the clean industries
+                                that would define the next century of global
+                                manufacturing. The first factories broke ground.
+                                The first workers were hired. The plan became
+                                reality.
+                            </p>
+                        </div>
+                        <div class="inv-chapter-callout">
+                            <span class="inv-callout-num">2015</span>
+                            <span class="inv-callout-lbl"
+                                >Year of SEZ designation — the moment a plan
+                                became a commitment backed by law,
+                                infrastructure, and investment.</span
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inv-story-divider"></div>
+
+                <div class="inv-story-chapter animate-up" id="chapter3">
+                    <div class="inv-chapter-marker">
+                        <span class="inv-chapter-num">03</span>
+                        <span class="inv-chapter-title">The Vision</span>
+                    </div>
+                    <div class="inv-chapter-body">
+                        <div class="inv-chapter-text">
+                            <h2>
+                                Africa's leading green<br />manufacturing
+                                destination.
+                            </h2>
+                            <p>
+                                The ambition is not modest. Atlantis is
+                                positioned to demonstrate that the transition
+                                away from fossil fuels can be an instrument of
+                                genuine social equity — that the green economy
+                                can create jobs, build local skills, grow local
+                                businesses, and deliver shared prosperity in
+                                communities that industrial capitalism left
+                                behind.
+                            </p>
+                            <p>
+                                Atlantis Capital is the digital infrastructure
+                                that makes this ecosystem visible, measurable,
+                                and connected. It links job seekers to
+                                employers, SMMEs to supply chains, training
+                                institutions to labour market signals, and
+                                investors to real-time impact data. The Twin
+                                Transition — digital and green simultaneously —
+                                is not a slogan. It is the operating model.
+                            </p>
+                        </div>
+                        <div class="inv-chapter-callout">
+                            <span class="inv-callout-num">12,400</span>
+                            <span class="inv-callout-lbl"
+                                >Projected direct and indirect jobs at full zone
+                                build-out — each one representing a family's
+                                economic future.</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═════════════════════════════════════════════════════════════ DATA ═══ -->
+            <section class="inv-data" id="data">
+                <div class="inv-container">
+                    <div class="inv-section-header animate-up">
+                        <div class="inv-section-label">LIVE IMPACT DATA</div>
+                        <h2 class="inv-section-title">
+                            Real Impact.<br />Real Time.
+                        </h2>
+                        <p class="inv-section-sub">
+                            Data drawn directly from the Atlantis Capital
+                            platform, reflecting verified activity within the
+                            SEZ ecosystem. Updated daily. Last refreshed:
+                            <span id="lastRefreshed"
+                                >27 May 2026, 06:00 SAST</span
+                            >
+                        </p>
+                    </div>
+
+                    <div class="inv-dashboard-grid">
+                        <!-- Panel 1: Community & Employment -->
+                        <div class="inv-panel animate-up">
+                            <div class="inv-panel-header">
+                                <div class="inv-panel-icon">
+                                    <i data-feather="users"></i>
+                                </div>
+                                <div>
+                                    <h3 class="inv-panel-title">
+                                        Community &amp; Employment
+                                    </h3>
+                                    <p class="inv-panel-sub">
+                                        Job seekers, placements, and local
+                                        economic participation
+                                    </p>
+                                </div>
+                                <button
+                                    class="inv-dl-btn"
+                                    onclick="exportCSV('employment')"
+                                    aria-label="Download employment data as CSV"
+                                >
+                                    <i data-feather="download"></i>
+                                </button>
+                            </div>
+                            <div class="inv-panel-body">
+                                <div class="inv-kpi-row">
+                                    <div class="inv-kpi">
+                                        <span
+                                            class="inv-kpi-num amber"
+                                            data-target="3842"
+                                            >0</span
+                                        >
+                                        <span class="inv-kpi-lbl"
+                                            >Registered Job Seekers</span
+                                        >
+                                    </div>
+                                    <div class="inv-kpi">
+                                        <span
+                                            class="inv-kpi-num"
+                                            data-target="1247"
+                                            >0</span
+                                        >
+                                        <span class="inv-kpi-lbl"
+                                            >Placements Facilitated</span
+                                        >
+                                    </div>
+                                    <div class="inv-kpi">
+                                        <span
+                                            class="inv-kpi-num"
+                                            data-target="68"
+                                            data-suffix="%"
+                                            >0</span
+                                        >
+                                        <span class="inv-kpi-lbl"
+                                            >Youth Under 35</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="inv-chart-wrap">
+                                    <h4 class="inv-chart-label">
+                                        Placements by Industry Sector
+                                    </h4>
+                                    <canvas
+                                        id="placementChart"
+                                        width="400"
+                                        height="220"
+                                        aria-label="Bar chart showing placements by industry sector"
+                                    ></canvas>
+                                    <table class="sr-only">
+                                        <caption>
+                                            Placements by Industry Sector
+                                        </caption>
+                                        <tr>
+                                            <th>Sector</th>
+                                            <th>Placements</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Solar &amp; Wind Manufacturing
+                                            </td>
+                                            <td>412</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Green Construction</td>
+                                            <td>284</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Electrical &amp; Mechanical</td>
+                                            <td>231</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Logistics &amp; Supply Chain
+                                            </td>
+                                            <td>198</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Business Services</td>
+                                            <td>122</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="inv-chart-pair">
+                                    <div class="inv-donut-wrap">
+                                        <canvas
+                                            id="residencyChart"
+                                            width="140"
+                                            height="140"
+                                            aria-label="Donut chart showing Atlantis vs surrounding area placements"
+                                        ></canvas>
+                                        <div class="inv-donut-centre">
+                                            <span>73%</span
+                                            ><small>Local hire</small>
+                                        </div>
+                                    </div>
+                                    <div class="inv-donut-legend">
+                                        <div class="inv-legend-item">
+                                            <span
+                                                class="inv-legend-dot teal"
+                                            ></span
+                                            >Atlantis residents
+                                            <strong>73%</strong>
+                                        </div>
+                                        <div class="inv-legend-item">
+                                            <span
+                                                class="inv-legend-dot amber"
+                                            ></span
+                                            >Surrounding areas
+                                            <strong>27%</strong>
+                                        </div>
+                                        <div class="inv-meta">
+                                            Avg. 6.2 weeks from registration to
+                                            first placement
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 2: SMME & Enterprise -->
+                        <div class="inv-panel animate-up">
+                            <div class="inv-panel-header">
+                                <div class="inv-panel-icon">
+                                    <i data-feather="briefcase"></i>
+                                </div>
+                                <div>
+                                    <h3 class="inv-panel-title">
+                                        SMME &amp; Enterprise
+                                    </h3>
+                                    <p class="inv-panel-sub">
+                                        Local business growth and procurement
+                                        flows
+                                    </p>
+                                </div>
+                                <button
+                                    class="inv-dl-btn"
+                                    onclick="exportCSV('smme')"
+                                    aria-label="Download SMME data as CSV"
+                                >
+                                    <i data-feather="download"></i>
+                                </button>
+                            </div>
+                            <div class="inv-panel-body">
+                                <div class="inv-kpi-row">
+                                    <div class="inv-kpi">
+                                        <span
+                                            class="inv-kpi-num amber"
+                                            data-target="284"
+                                            >0</span
+                                        >
+                                        <span class="inv-kpi-lbl"
+                                            >Registered SMMEs</span
+                                        >
+                                    </div>
+                                    <div class="inv-kpi">
+                                        <span
+                                            class="inv-kpi-num"
+                                            data-prefix="R"
+                                            data-target="142"
+                                            data-suffix="m"
+                                            >0</span
+                                        >
+                                        <span class="inv-kpi-lbl"
+                                            >Local Procurement Value</span
+                                        >
+                                    </div>
+                                    <div class="inv-kpi">
+                                        <span
+                                            class="inv-kpi-num"
+                                            data-target="89"
+                                            >0</span
+                                        >
+                                        <span class="inv-kpi-lbl"
+                                            >Formalised Businesses</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="inv-chart-wrap">
+                                    <h4 class="inv-chart-label">
+                                        SMME Sector Breakdown
+                                    </h4>
+                                    <canvas
+                                        id="smmeChart"
+                                        width="400"
+                                        height="180"
+                                        aria-label="Donut chart showing SMME breakdown by sector"
+                                    ></canvas>
+                                </div>
+                                <div class="inv-stat-row">
+                                    <div class="inv-inline-stat">
+                                        <strong>1,840+</strong>
+                                        <span
+                                            >Procurement contracts
+                                            facilitated</span
+                                        >
+                                    </div>
+                                    <div class="inv-inline-stat">
+                                        <strong>612</strong>
+                                        <span
+                                            >Unique employer-SMME
+                                            relationships</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 3: Skills & Training -->
+                        <div class="inv-panel animate-up">
+                            <div class="inv-panel-header">
+                                <div class="inv-panel-icon">
+                                    <i data-feather="book-open"></i>
+                                </div>
+                                <div>
+                                    <h3 class="inv-panel-title">
+                                        Skills &amp; Training
+                                    </h3>
+                                    <p class="inv-panel-sub">
+                                        Programme outcomes and workforce
+                                        development
+                                    </p>
+                                </div>
+                                <button
+                                    class="inv-dl-btn"
+                                    onclick="exportCSV('skills')"
+                                    aria-label="Download skills data as CSV"
+                                >
+                                    <i data-feather="download"></i>
+                                </button>
+                            </div>
+                            <div class="inv-panel-body">
+                                <div class="inv-placement-rate-display">
+                                    <span
+                                        class="inv-placement-rate-num"
+                                        data-target="74"
+                                        data-suffix="%"
+                                        >0</span
+                                    >
+                                    <span class="inv-placement-rate-lbl"
+                                        >Graduate Placement Rate</span
+                                    >
+                                </div>
+                                <div class="inv-kpi-row">
+                                    <div class="inv-kpi">
+                                        <span
+                                            class="inv-kpi-num"
+                                            data-target="38"
+                                            >0</span
+                                        >
+                                        <span class="inv-kpi-lbl"
+                                            >Active Programmes</span
+                                        >
+                                    </div>
+                                    <div class="inv-kpi">
+                                        <span
+                                            class="inv-kpi-num"
+                                            data-target="2140"
+                                            >0</span
+                                        >
+                                        <span class="inv-kpi-lbl"
+                                            >Total Enrolments</span
+                                        >
+                                    </div>
+                                    <div class="inv-kpi">
+                                        <span
+                                            class="inv-kpi-num"
+                                            data-target="1684"
+                                            >0</span
+                                        >
+                                        <span class="inv-kpi-lbl"
+                                            >Impact Passports Issued</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="inv-chart-wrap">
+                                    <h4 class="inv-chart-label">
+                                        Completions by Skills Area
+                                    </h4>
+                                    <canvas
+                                        id="skillsChart"
+                                        width="400"
+                                        height="200"
+                                        aria-label="Horizontal bar chart showing completions by skills area"
+                                    ></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 4: Zone Growth & Investment -->
+                        <div class="inv-panel animate-up">
+                            <div class="inv-panel-header">
+                                <div class="inv-panel-icon">
+                                    <i data-feather="map-pin"></i>
+                                </div>
+                                <div>
+                                    <h3 class="inv-panel-title">
+                                        Zone Growth &amp; Investment
+                                    </h3>
+                                    <p class="inv-panel-sub">
+                                        Zone development, tenant activity, and
+                                        capital flows
+                                    </p>
+                                </div>
+                                <button
+                                    class="inv-dl-btn"
+                                    onclick="exportCSV('zone')"
+                                    aria-label="Download zone data as CSV"
+                                >
+                                    <i data-feather="download"></i>
+                                </button>
+                            </div>
+                            <div class="inv-panel-body">
+                                <div class="inv-kpi-row">
+                                    <div class="inv-kpi">
+                                        <span
+                                            class="inv-kpi-num amber"
+                                            data-target="47"
+                                            >0</span
+                                        >
+                                        <span class="inv-kpi-lbl"
+                                            >Companies in Zone</span
+                                        >
+                                    </div>
+                                    <div class="inv-kpi">
+                                        <span
+                                            class="inv-kpi-num"
+                                            data-prefix="R"
+                                            data-target="8.2"
+                                            data-suffix="bn"
+                                            >0</span
+                                        >
+                                        <span class="inv-kpi-lbl"
+                                            >Committed Investment</span
+                                        >
+                                    </div>
+                                    <div class="inv-kpi">
+                                        <span
+                                            class="inv-kpi-num"
+                                            data-target="11"
+                                            >0</span
+                                        >
+                                        <span class="inv-kpi-lbl"
+                                            >Active Construction Projects</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="inv-progress-section">
+                                    <div class="inv-progress-item">
+                                        <div class="inv-progress-meta">
+                                            <span
+                                                >Renewable Energy Capacity</span
+                                            >
+                                            <strong class="amber-text"
+                                                >84 MW / 120 MW target</strong
+                                            >
+                                        </div>
+                                        <div class="inv-progress-track">
+                                            <div
+                                                class="inv-progress-fill"
+                                                data-width="70"
+                                                style="width: 0%"
+                                            ></div>
+                                        </div>
+                                    </div>
+                                    <div class="inv-progress-item">
+                                        <div class="inv-progress-meta">
+                                            <span
+                                                >Development-Ready Land
+                                                Utilisation</span
+                                            >
+                                            <strong
+                                                >62 ha / 89 ha available</strong
+                                            >
+                                        </div>
+                                        <div class="inv-progress-track">
+                                            <div
+                                                class="inv-progress-fill teal-fill"
+                                                data-width="70"
+                                                style="width: 0%"
+                                            ></div>
+                                        </div>
+                                    </div>
+                                    <div class="inv-progress-item">
+                                        <div class="inv-progress-meta">
+                                            <span
+                                                >Jobs Created vs 2030
+                                                Target</span
+                                            >
+                                            <strong>3,840 / 12,400</strong>
+                                        </div>
+                                        <div class="inv-progress-track">
+                                            <div
+                                                class="inv-progress-fill"
+                                                data-width="31"
+                                                style="width: 0%"
+                                            ></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /dashboard-grid -->
+
+                    <div class="inv-dashboard-footer animate-up">
+                        <a
+                            href="#"
+                            class="inv-report-btn"
+                            onclick="downloadReport(event)"
+                        >
+                            <i data-feather="file-text"></i>
+                            Download Full Impact Report (PDF)
+                        </a>
+                        <p class="inv-data-note">
+                            All data is independently verified by ASEZCo and
+                            updated on a daily refresh cycle from the Atlantis
+                            Connect platform.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════════════════════════════════════════ SUSTAINABILITY ═══ -->
+            <section class="inv-sustain" id="sustainability">
+                <div class="inv-container">
+                    <div class="inv-section-header animate-up light-header">
+                        <div class="inv-section-label teal-label">
+                            SUSTAINABILITY IMPACT
+                        </div>
+                        <h2 class="inv-section-title dark">
+                            Measured. Verified.<br />Improving Every Year.
+                        </h2>
+                        <p class="inv-section-sub dark-sub">
+                            Environmental and social performance data that meets
+                            the standards of ESG investors, development finance
+                            institutions, and international sustainability
+                            partners.
+                        </p>
+                    </div>
+
+                    <div class="inv-metrics-split">
+                        <div class="inv-metrics-col animate-up">
+                            <h3 class="inv-metrics-cat-title">
+                                Environmental Metrics
+                            </h3>
+                            <div class="inv-metric-card">
+                                <div class="inv-metric-top">
+                                    <span class="inv-metric-val amber-text"
+                                        >284,000 <small>tCO₂e</small></span
+                                    >
+                                    <span class="inv-metric-trend up"
+                                        ><i data-feather="trending-up"></i> +18%
+                                        YoY</span
+                                    >
+                                </div>
+                                <h4>Carbon Emissions Avoided</h4>
+                                <p>
+                                    Equivalent to removing 61,000 cars from
+                                    South African roads for a full year.
+                                    Verified through third-party lifecycle
+                                    assessment.
+                                </p>
+                                <div class="inv-metric-bench">
+                                    <span class="inv-bench-label"
+                                        >vs. Conventional Industrial Zone</span
+                                    >
+                                    <div class="inv-bench-bar">
+                                        <div
+                                            class="inv-bench-fill"
+                                            data-width="72"
+                                            style="width: 0%"
+                                        ></div>
+                                    </div>
+                                    <span class="inv-bench-pct"
+                                        >72% lower emissions intensity</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="inv-metric-card">
+                                <div class="inv-metric-top">
+                                    <span class="inv-metric-val amber-text"
+                                        >428 <small>MW</small></span
+                                    >
+                                    <span class="inv-metric-trend up"
+                                        ><i data-feather="trending-up"></i> +34%
+                                        YoY</span
+                                    >
+                                </div>
+                                <h4>Renewable Energy Capacity</h4>
+                                <p>
+                                    Manufactured or installed through zone
+                                    activity in the past 12 months. Solar PV,
+                                    wind, and storage systems produced in
+                                    Atlantis.
+                                </p>
+                            </div>
+                            <div class="inv-metric-card">
+                                <div class="inv-metric-top">
+                                    <span class="inv-metric-val"
+                                        >84<small>%</small></span
+                                    >
+                                    <span class="inv-metric-trend up"
+                                        ><i data-feather="trending-up"></i> +12%
+                                        YoY</span
+                                    >
+                                </div>
+                                <h4>Zone Operations Powered by Renewables</h4>
+                                <p>
+                                    The zone itself leads by example — 84% of
+                                    operational energy consumption within the
+                                    SEZ comes from renewable sources.
+                                </p>
+                            </div>
+                            <div class="inv-metric-card">
+                                <div class="inv-metric-top">
+                                    <span class="inv-metric-val"
+                                        >91<small>%</small></span
+                                    >
+                                    <span class="inv-metric-trend up"
+                                        ><i data-feather="trending-up"></i> +8%
+                                        YoY</span
+                                    >
+                                </div>
+                                <h4>Waste Diversion from Landfill</h4>
+                                <p>
+                                    Through circular economy initiatives within
+                                    the zone, including material recovery, reuse
+                                    programmes, and industrial symbiosis
+                                    networks.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="inv-metrics-col animate-up">
+                            <h3 class="inv-metrics-cat-title">
+                                Social Metrics
+                            </h3>
+                            <div class="inv-metric-card">
+                                <div class="inv-metric-top">
+                                    <span class="inv-metric-val amber-text"
+                                        >73<small>%</small></span
+                                    >
+                                    <span class="inv-metric-trend up"
+                                        ><i data-feather="trending-up"></i> +6%
+                                        YoY</span
+                                    >
+                                </div>
+                                <h4>Local Hire Rate</h4>
+                                <p>
+                                    73% of zone jobs are filled by Atlantis
+                                    residents — well above the 60% local hire
+                                    commitment embedded in zone operating
+                                    agreements.
+                                </p>
+                            </div>
+                            <div class="inv-metric-card">
+                                <div class="inv-metric-top">
+                                    <span class="inv-metric-val"
+                                        >42<small>%</small></span
+                                    >
+                                    <span class="inv-metric-trend up"
+                                        ><i data-feather="trending-up"></i> +9%
+                                        YoY</span
+                                    >
+                                </div>
+                                <h4>Women in Non-Traditional Roles</h4>
+                                <p>
+                                    42% of technical and engineering roles in
+                                    the zone are held by women — a deliberate
+                                    outcome of intentional recruitment and
+                                    skills development programmes.
+                                </p>
+                            </div>
+                            <div class="inv-metric-card">
+                                <div class="inv-metric-top">
+                                    <span class="inv-metric-val"
+                                        >68<small>%</small></span
+                                    >
+                                    <span class="inv-metric-trend up"
+                                        ><i data-feather="trending-up"></i>
+                                        Stable</span
+                                    >
+                                </div>
+                                <h4>Youth Employment (Under 35)</h4>
+                                <p>
+                                    68% of zone jobs are held by workers under
+                                    35, representing a direct intervention in
+                                    South Africa's structural youth unemployment
+                                    crisis.
+                                </p>
+                            </div>
+                            <div class="inv-metric-card">
+                                <div class="inv-metric-top">
+                                    <span class="inv-metric-val amber-text"
+                                        >R142m</span
+                                    >
+                                    <span class="inv-metric-trend up"
+                                        ><i data-feather="trending-up"></i> +28%
+                                        YoY</span
+                                    >
+                                </div>
+                                <h4>Local SMME Procurement Spend</h4>
+                                <p>
+                                    R142 million in procurement spend channelled
+                                    to locally owned small businesses through
+                                    the platform in the past 12 months.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SDG Alignment -->
+                    <div class="inv-sdg-section animate-up">
+                        <h3 class="inv-sdg-title">
+                            Sustainability Framework Alignment
+                        </h3>
+                        <div class="inv-sdg-grid">
+                            <div
+                                class="inv-sdg-badge"
+                                style="--sdg-color: #e5243b"
+                            >
+                                <span class="inv-sdg-num">SDG 1</span>
+                                <span class="inv-sdg-name">No Poverty</span>
+                                <span class="inv-sdg-note"
+                                    >Direct employment creation in historically
+                                    excluded community</span
+                                >
+                            </div>
+                            <div
+                                class="inv-sdg-badge"
+                                style="--sdg-color: #dda63a"
+                            >
+                                <span class="inv-sdg-num">SDG 8</span>
+                                <span class="inv-sdg-name">Decent Work</span>
+                                <span class="inv-sdg-note"
+                                    >Fair-wage green jobs with skills
+                                    development pathways</span
+                                >
+                            </div>
+                            <div
+                                class="inv-sdg-badge"
+                                style="--sdg-color: #4c9f38"
+                            >
+                                <span class="inv-sdg-num">SDG 9</span>
+                                <span class="inv-sdg-name"
+                                    >Industry &amp; Innovation</span
+                                >
+                                <span class="inv-sdg-note"
+                                    >Green manufacturing infrastructure and
+                                    technology transfer</span
+                                >
+                            </div>
+                            <div
+                                class="inv-sdg-badge"
+                                style="--sdg-color: #ff3a21"
+                            >
+                                <span class="inv-sdg-num">SDG 10</span>
+                                <span class="inv-sdg-name"
+                                    >Reduced Inequalities</span
+                                >
+                                <span class="inv-sdg-note"
+                                    >Spatial economic justice through deliberate
+                                    B-BBEE integration</span
+                                >
+                            </div>
+                            <div
+                                class="inv-sdg-badge"
+                                style="--sdg-color: #56c02b"
+                            >
+                                <span class="inv-sdg-num">SDG 13</span>
+                                <span class="inv-sdg-name">Climate Action</span>
+                                <span class="inv-sdg-note"
+                                    >284,000 tCO₂e annually avoided through zone
+                                    activity</span
+                                >
+                            </div>
+                            <div
+                                class="inv-sdg-badge"
+                                style="--sdg-color: #fcc30b"
+                            >
+                                <span class="inv-sdg-num">IFC PS</span>
+                                <span class="inv-sdg-name"
+                                    >IFC Performance Standards</span
+                                >
+                                <span class="inv-sdg-note"
+                                    >Environmental &amp; social management
+                                    aligned to IFC PS 1–8</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonials -->
+                    <div class="inv-testimonials animate-up">
+                        <h3 class="inv-testimonials-title">
+                            Voices from Atlantis
+                        </h3>
+                        <div class="inv-testimonials-grid">
+                            <div class="inv-testimonial">
+                                <div
+                                    class="inv-testimonial-avatar"
+                                    style="background: var(--teal-dim)"
+                                >
+                                    NH
+                                </div>
+                                <blockquote>
+                                    "Before the SEZ, I hadn't worked for three
+                                    years. Now I'm a solar panel assembler with
+                                    a qualification and a salary I'm proud of.
+                                    My children see me go to work every
+                                    morning."
+                                </blockquote>
+                                <cite
+                                    >Nadia H. — Solar PV Assembler, GreenTech
+                                    Atlantis</cite
+                                >
+                            </div>
+                            <div class="inv-testimonial">
+                                <div
+                                    class="inv-testimonial-avatar"
+                                    style="background: var(--amber-dim)"
+                                >
+                                    TM
+                                </div>
+                                <blockquote>
+                                    "The procurement platform opened doors I
+                                    didn't know existed. We went from a
+                                    two-person electrical contracting business
+                                    to a team of eleven, all working on SEZ
+                                    projects."
+                                </blockquote>
+                                <cite
+                                    >Themba M. — Owner, Mabunda Electrical
+                                    Solutions</cite
+                                >
+                            </div>
+                            <div class="inv-testimonial">
+                                <div
+                                    class="inv-testimonial-avatar"
+                                    style="background: var(--teal-dim)"
+                                >
+                                    FJ
+                                </div>
+                                <blockquote>
+                                    "I completed my learnership through West
+                                    Coast TVET and was placed within six weeks.
+                                    The Impact Passport showed employers exactly
+                                    what I could do. It changed everything."
+                                </blockquote>
+                                <cite
+                                    >Fatima J. — Electrical Technician, Atlantis
+                                    Wind Components</cite
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════════════════════════════════════ OPPORTUNITY ═══ -->
+            <section class="inv-opportunity" id="opportunity">
+                <div class="inv-container">
+                    <div class="inv-section-header animate-up">
+                        <div class="inv-section-label">
+                            THE INVESTMENT OPPORTUNITY
+                        </div>
+                        <h2 class="inv-section-title">
+                            The Case Is Clear.<br />The Timing Is Now.
+                        </h2>
+                        <p class="inv-section-sub">
+                            The Atlantis SEZ offers a rare convergence of
+                            infrastructure readiness, policy support, skilled
+                            labour availability, and global demand tailwinds for
+                            green manufacturing.
+                        </p>
+                    </div>
+
+                    <!-- Why Atlantis -->
+                    <div class="inv-why-grid animate-up">
+                        <div class="inv-why-card">
+                            <i data-feather="anchor"></i>
+                            <h4>Strategic Location</h4>
+                            <p>
+                                50 km from Port of Cape Town. Direct N7 highway
+                                access. Rail connection available. Proximity to
+                                Koeberg and the Western Cape's renewable energy
+                                corridor.
+                            </p>
+                        </div>
+                        <div class="inv-why-card">
+                            <i data-feather="zap"></i>
+                            <h4>Infrastructure Ready</h4>
+                            <p>
+                                Fully serviced development-ready land. Power,
+                                water, fibre, and roads already in place. No
+                                greenfield development risk — plug in and
+                                operate.
+                            </p>
+                        </div>
+                        <div class="inv-why-card">
+                            <i data-feather="users"></i>
+                            <h4>Skilled Workforce</h4>
+                            <p>
+                                A community with deep manufacturing heritage and
+                                a rapidly growing pipeline of trained green
+                                economy workers through the Atlantis Capital
+                                platform.
+                            </p>
+                        </div>
+                        <div class="inv-why-card">
+                            <i data-feather="shield"></i>
+                            <h4>Regulatory Support</h4>
+                            <p>
+                                Dedicated SEZ tax incentives, customs relief,
+                                and the active support of national, provincial,
+                                and local government aligned behind a single
+                                development objective.
+                            </p>
+                        </div>
+                        <div class="inv-why-card">
+                            <i data-feather="trending-up"></i>
+                            <h4>Market Tailwinds</h4>
+                            <p>
+                                African green energy investment is accelerating.
+                                RE capacity additions are forecast to triple by
+                                2030. Atlantis is positioned at the supply end
+                                of this demand curve.
+                            </p>
+                        </div>
+                        <div class="inv-why-card">
+                            <i data-feather="award"></i>
+                            <h4>Proven Track Record</h4>
+                            <p>
+                                47 companies established. R8.2bn committed.
+                                3,840 jobs created. The zone is not a concept —
+                                it is a functioning, growing industrial
+                                ecosystem.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- SEZ Incentives -->
+                    <div class="inv-incentives-section animate-up">
+                        <h3 class="inv-subsection-title">
+                            SEZ Financial &amp; Regulatory Incentives
+                        </h3>
+                        <div class="inv-incentives-grid">
+                            <div class="inv-incentive-card">
+                                <div class="inv-incentive-rate amber-text">
+                                    15<small>%</small>
+                                </div>
+                                <h4>Corporate Tax Rate</h4>
+                                <p>
+                                    Qualifying SEZ entities pay 15% corporate
+                                    income tax vs the standard 27% rate — a 12
+                                    percentage point advantage on every rand of
+                                    profit.
+                                </p>
+                                <span class="inv-incentive-impact"
+                                    >Saves approx. R12m pa on R100m taxable
+                                    income</span
+                                >
+                            </div>
+                            <div class="inv-incentive-card">
+                                <div class="inv-incentive-rate">
+                                    0<small>% VAT</small>
+                                </div>
+                                <h4>Customs &amp; VAT Relief</h4>
+                                <p>
+                                    Zero customs duty and VAT suspension on
+                                    imported capital equipment within the zone,
+                                    significantly reducing the cost of
+                                    establishing manufacturing operations.
+                                </p>
+                                <span class="inv-incentive-impact"
+                                    >Typical saving: 8–15% of capital equipment
+                                    cost</span
+                                >
+                            </div>
+                            <div class="inv-incentive-card">
+                                <div class="inv-incentive-rate">
+                                    +50<small>%</small>
+                                </div>
+                                <h4>Employment Tax Incentive</h4>
+                                <p>
+                                    Enhanced ETI rebates for hiring young
+                                    workers aged 18–29, effectively reducing the
+                                    cost of youth employment and incentivising
+                                    skills development pipelines.
+                                </p>
+                                <span class="inv-incentive-impact"
+                                    >Up to R1,500/month per qualifying young
+                                    employee</span
+                                >
+                            </div>
+                            <div class="inv-incentive-card">
+                                <div class="inv-incentive-rate">
+                                    <i data-feather="database"></i>
+                                </div>
+                                <h4>IDC &amp; DFI Access</h4>
+                                <p>
+                                    Preferential access to Industrial
+                                    Development Corporation loan facilities and
+                                    a network of development finance
+                                    institutions active in the zone.
+                                </p>
+                                <span class="inv-incentive-impact"
+                                    >Below-market funding rates for qualifying
+                                    investments</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Development Opportunities -->
+                    <div class="inv-devopps-section animate-up">
+                        <h3 class="inv-subsection-title">
+                            Available Development Opportunities
+                        </h3>
+                        <div class="inv-devopps-grid">
+                            <div class="inv-devopp-card">
+                                <div class="inv-devopp-badge available">
+                                    Available
+                                </div>
+                                <h4>Plot 14A — Industrial Land</h4>
+                                <div class="inv-devopp-specs">
+                                    <span
+                                        ><i data-feather="maximize-2"></i> 4.2
+                                        ha</span
+                                    >
+                                    <span
+                                        ><i data-feather="zap"></i> Power
+                                        connected</span
+                                    >
+                                    <span
+                                        ><i data-feather="droplet"></i> Water
+                                        connected</span
+                                    >
+                                </div>
+                                <p>
+                                    Serviced industrial land in the northern
+                                    expansion zone. Suitable for medium-to-large
+                                    green manufacturing operations. Lease from
+                                    R18/m²/month.
+                                </p>
+                                <button
+                                    class="inv-interest-btn"
+                                    onclick="openContactForm('Plot 14A')"
+                                >
+                                    Register Interest
+                                </button>
+                            </div>
+                            <div class="inv-devopp-card">
+                                <div class="inv-devopp-badge available">
+                                    Available
+                                </div>
+                                <h4>Factory Shell B3 — 3,200m²</h4>
+                                <div class="inv-devopp-specs">
+                                    <span
+                                        ><i data-feather="maximize-2"></i> 3,200
+                                        m²</span
+                                    >
+                                    <span
+                                        ><i data-feather="check-circle"></i>
+                                        Fitout-ready</span
+                                    >
+                                    <span
+                                        ><i data-feather="wifi"></i> Fibre
+                                        connected</span
+                                    >
+                                </div>
+                                <p>
+                                    Completed factory shell with 8m eave height,
+                                    heavy-duty floor loading, and three-phase
+                                    power. Immediately available for fitout and
+                                    occupation.
+                                </p>
+                                <button
+                                    class="inv-interest-btn"
+                                    onclick="
+                                        openContactForm('Factory Shell B3')
+                                    "
+                                >
+                                    Register Interest
+                                </button>
+                            </div>
+                            <div class="inv-devopp-card">
+                                <div class="inv-devopp-badge anchor">
+                                    Anchor Opportunity
+                                </div>
+                                <h4>Zone C — Anchor Tenant Site</h4>
+                                <div class="inv-devopp-specs">
+                                    <span
+                                        ><i data-feather="maximize-2"></i> 12–20
+                                        ha</span
+                                    >
+                                    <span
+                                        ><i data-feather="star"></i> Premium
+                                        location</span
+                                    >
+                                    <span
+                                        ><i data-feather="truck"></i> Rail
+                                        access</span
+                                    >
+                                </div>
+                                <p>
+                                    A large-format anchor site available for a
+                                    major green manufacturing operation. Custom
+                                    infrastructure package available.
+                                    Discussions by invitation.
+                                </p>
+                                <button
+                                    class="inv-interest-btn"
+                                    onclick="
+                                        openContactForm('Anchor Site Zone C')
+                                    "
+                                >
+                                    Express Interest
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Partners -->
+                    <div class="inv-partners-section animate-up">
+                        <h3 class="inv-subsection-title">
+                            Partners &amp; Institutional Endorsements
+                        </h3>
+                        <div class="inv-partners-row">
+                            <div
+                                class="inv-partner-logo"
+                                title="Department of Trade, Industry and Competition"
+                            >
+                                <span class="inv-partner-name">DTIC</span>
+                                <small
+                                    >Dept. of Trade, Industry &amp;
+                                    Competition</small
+                                >
+                            </div>
+                            <div
+                                class="inv-partner-logo"
+                                title="Western Cape Government"
+                            >
+                                <span class="inv-partner-name">WCG</span>
+                                <small>Western Cape Government</small>
+                            </div>
+                            <div
+                                class="inv-partner-logo"
+                                title="Industrial Development Corporation"
+                            >
+                                <span class="inv-partner-name">IDC</span>
+                                <small>Industrial Development Corp.</small>
+                            </div>
+                            <div
+                                class="inv-partner-logo"
+                                title="City of Cape Town"
+                            >
+                                <span class="inv-partner-name">CoCT</span>
+                                <small>City of Cape Town</small>
+                            </div>
+                            <div class="inv-partner-logo" title="Green Cape">
+                                <span class="inv-partner-name">GC</span>
+                                <small>Green Cape</small>
+                            </div>
+                            <div
+                                class="inv-partner-logo"
+                                title="University of Cape Town"
+                            >
+                                <span class="inv-partner-name">UCT</span>
+                                <small>University of Cape Town</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════════════════════════════════════════════ THE ZONE ═══ -->
+            <section class="inv-zone" id="zone">
+                <div class="inv-container">
+                    <div class="inv-section-header animate-up light-header">
+                        <div class="inv-section-label teal-label">THE ZONE</div>
+                        <h2 class="inv-section-title dark">
+                            Infrastructure &amp; Location
+                        </h2>
+                        <p class="inv-section-sub dark-sub">
+                            89 hectares of development-ready industrial land,
+                            fully serviced and positioned within the Cape Town
+                            economic corridor.
+                        </p>
+                    </div>
+
+                    <!-- Zone Map placeholder -->
+                    <div class="inv-map-wrap animate-up">
+                        <div class="inv-map-placeholder" id="zoneMap">
+                            <div class="inv-map-overlay-label">
+                                Atlantis SEZ — Zone Map
+                            </div>
+                            <div class="inv-map-legend">
+                                <div class="inv-legend-row">
+                                    <span class="inv-map-dot occupied"></span
+                                    >Occupied
+                                </div>
+                                <div class="inv-legend-row">
+                                    <span
+                                        class="inv-map-dot construction"
+                                    ></span
+                                    >Under Construction
+                                </div>
+                                <div class="inv-legend-row">
+                                    <span class="inv-map-dot available"></span
+                                    >Available
+                                </div>
+                            </div>
+                            <svg
+                                class="inv-zone-svg"
+                                viewBox="0 0 800 450"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <!-- Zone boundary -->
+                                <rect
+                                    x="40"
+                                    y="40"
+                                    width="720"
+                                    height="370"
+                                    rx="8"
+                                    fill="none"
+                                    stroke="rgba(15,159,104,0.4)"
+                                    stroke-width="2"
+                                    stroke-dasharray="8,4"
+                                />
+                                <!-- Road -->
+                                <rect
+                                    x="40"
+                                    y="195"
+                                    width="720"
+                                    height="20"
+                                    fill="rgba(255,255,255,0.08)"
+                                />
+                                <rect
+                                    x="390"
+                                    y="40"
+                                    width="20"
+                                    height="370"
+                                    fill="rgba(255,255,255,0.08)"
+                                />
+                                <!-- Occupied plots -->
+                                <rect
+                                    x="60"
+                                    y="60"
+                                    width="140"
+                                    height="100"
+                                    rx="4"
+                                    fill="rgba(15,159,104,0.35)"
+                                    stroke="rgba(15,159,104,0.6)"
+                                    stroke-width="1.5"
+                                    class="inv-map-plot"
+                                    data-name="GreenTech Atlantis"
+                                    data-status="Occupied"
+                                    data-size="2.1 ha"
+                                />
+                                <rect
+                                    x="220"
+                                    y="60"
+                                    width="100"
+                                    height="100"
+                                    rx="4"
+                                    fill="rgba(15,159,104,0.35)"
+                                    stroke="rgba(15,159,104,0.6)"
+                                    stroke-width="1.5"
+                                    class="inv-map-plot"
+                                    data-name="Atlantis Wind Components"
+                                    data-status="Occupied"
+                                    data-size="1.4 ha"
+                                />
+                                <rect
+                                    x="60"
+                                    y="230"
+                                    width="120"
+                                    height="90"
+                                    rx="4"
+                                    fill="rgba(15,159,104,0.35)"
+                                    stroke="rgba(15,159,104,0.6)"
+                                    stroke-width="1.5"
+                                    class="inv-map-plot"
+                                    data-name="SunPower Manufacturing"
+                                    data-status="Occupied"
+                                    data-size="1.8 ha"
+                                />
+                                <!-- Under construction -->
+                                <rect
+                                    x="340"
+                                    y="60"
+                                    width="120"
+                                    height="120"
+                                    rx="4"
+                                    fill="rgba(217,119,6,0.3)"
+                                    stroke="rgba(217,119,6,0.7)"
+                                    stroke-width="1.5"
+                                    stroke-dasharray="6,3"
+                                    class="inv-map-plot"
+                                    data-name="Factory Shell B3 Expansion"
+                                    data-status="Under Construction"
+                                    data-size="1.9 ha"
+                                />
+                                <rect
+                                    x="200"
+                                    y="230"
+                                    width="150"
+                                    height="90"
+                                    rx="4"
+                                    fill="rgba(217,119,6,0.3)"
+                                    stroke="rgba(217,119,6,0.7)"
+                                    stroke-width="1.5"
+                                    stroke-dasharray="6,3"
+                                    class="inv-map-plot"
+                                    data-name="New Solar Component Plant"
+                                    data-status="Under Construction"
+                                    data-size="2.4 ha"
+                                />
+                                <!-- Available -->
+                                <rect
+                                    x="480"
+                                    y="60"
+                                    width="120"
+                                    height="100"
+                                    rx="4"
+                                    fill="rgba(59,130,246,0.2)"
+                                    stroke="rgba(59,130,246,0.5)"
+                                    stroke-width="1.5"
+                                    class="inv-map-plot"
+                                    data-name="Plot 14A"
+                                    data-status="Available"
+                                    data-size="4.2 ha"
+                                />
+                                <rect
+                                    x="620"
+                                    y="60"
+                                    width="120"
+                                    height="120"
+                                    rx="4"
+                                    fill="rgba(59,130,246,0.2)"
+                                    stroke="rgba(59,130,246,0.5)"
+                                    stroke-width="1.5"
+                                    class="inv-map-plot"
+                                    data-name="Factory Shell B3"
+                                    data-status="Available — Fitout Ready"
+                                    data-size="3,200 m²"
+                                />
+                                <rect
+                                    x="410"
+                                    y="230"
+                                    width="310"
+                                    height="180"
+                                    rx="4"
+                                    fill="rgba(59,130,246,0.15)"
+                                    stroke="rgba(59,130,246,0.4)"
+                                    stroke-width="1.5"
+                                    stroke-dasharray="4,3"
+                                    class="inv-map-plot"
+                                    data-name="Zone C — Anchor Site"
+                                    data-status="Available — Anchor Tenant"
+                                    data-size="12–20 ha"
+                                />
+                                <!-- Labels -->
+                                <text
+                                    x="130"
+                                    y="115"
+                                    text-anchor="middle"
+                                    fill="rgba(255,255,255,0.8)"
+                                    font-size="10"
+                                    font-family="DM Sans"
+                                >
+                                    GreenTech
+                                </text>
+                                <text
+                                    x="270"
+                                    y="115"
+                                    text-anchor="middle"
+                                    fill="rgba(255,255,255,0.8)"
+                                    font-size="10"
+                                    font-family="DM Sans"
+                                >
+                                    Wind Co.
+                                </text>
+                                <text
+                                    x="400"
+                                    y="125"
+                                    text-anchor="middle"
+                                    fill="rgba(255,255,255,0.7)"
+                                    font-size="10"
+                                    font-family="DM Sans"
+                                >
+                                    B3 Exp.
+                                </text>
+                                <text
+                                    x="540"
+                                    y="115"
+                                    text-anchor="middle"
+                                    fill="rgba(255,255,255,0.7)"
+                                    font-size="10"
+                                    font-family="DM Sans"
+                                >
+                                    Plot 14A
+                                </text>
+                                <text
+                                    x="680"
+                                    y="125"
+                                    text-anchor="middle"
+                                    fill="rgba(255,255,255,0.7)"
+                                    font-size="10"
+                                    font-family="DM Sans"
+                                >
+                                    Factory B3
+                                </text>
+                                <text
+                                    x="565"
+                                    y="325"
+                                    text-anchor="middle"
+                                    fill="rgba(255,255,255,0.6)"
+                                    font-size="11"
+                                    font-family="DM Sans"
+                                >
+                                    Zone C — Anchor Site
+                                </text>
+                            </svg>
+                            <div class="inv-map-tooltip" id="mapTooltip"></div>
+                        </div>
+                    </div>
+
+                    <!-- Infrastructure specs -->
+                    <div class="inv-infra-grid animate-up">
+                        <div class="inv-spec-item">
+                            <i data-feather="maximize"></i>
+                            <div>
+                                <strong>89 hectares</strong
+                                ><span
+                                    >Total zone area — development-ready</span
+                                >
+                            </div>
+                        </div>
+                        <div class="inv-spec-item">
+                            <i data-feather="zap"></i>
+                            <div>
+                                <strong>132 kV</strong
+                                ><span
+                                    >Power supply capacity — grid
+                                    connected</span
+                                >
+                            </div>
+                        </div>
+                        <div class="inv-spec-item">
+                            <i data-feather="droplet"></i>
+                            <div>
+                                <strong>Municipal grade</strong
+                                ><span
+                                    >Water &amp; sanitation infrastructure</span
+                                >
+                            </div>
+                        </div>
+                        <div class="inv-spec-item">
+                            <i data-feather="wifi"></i>
+                            <div>
+                                <strong>Dark fibre</strong
+                                ><span
+                                    >High-speed fibre optic connectivity</span
+                                >
+                            </div>
+                        </div>
+                        <div class="inv-spec-item">
+                            <i data-feather="anchor"></i>
+                            <div>
+                                <strong>50 km</strong
+                                ><span>To Port of Cape Town</span>
+                            </div>
+                        </div>
+                        <div class="inv-spec-item">
+                            <i data-feather="navigation"></i>
+                            <div>
+                                <strong>45 km</strong
+                                ><span>To Cape Town International Airport</span>
+                            </div>
+                        </div>
+                        <div class="inv-spec-item">
+                            <i data-feather="truck"></i>
+                            <div>
+                                <strong>N7 direct</strong
+                                ><span
+                                    >National highway access from zone
+                                    gate</span
+                                >
+                            </div>
+                        </div>
+                        <div class="inv-spec-item">
+                            <i data-feather="shield"></i>
+                            <div>
+                                <strong>24/7</strong
+                                ><span
+                                    >On-site security and access
+                                    management</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Development Timeline -->
+                    <div class="inv-timeline-section animate-up">
+                        <h3 class="inv-subsection-title dark">
+                            Development Timeline
+                        </h3>
+                        <div class="inv-timeline" id="zoneTimeline">
+                            <div class="inv-tl-item historical">
+                                <div class="inv-tl-dot"></div>
+                                <div class="inv-tl-content">
+                                    <span class="inv-tl-date">1975</span>
+                                    <strong>Township Established</strong>
+                                    <p>
+                                        Atlantis founded under apartheid Group
+                                        Areas Act as an industrial township
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="inv-tl-item historical">
+                                <div class="inv-tl-dot"></div>
+                                <div class="inv-tl-content">
+                                    <span class="inv-tl-date">1988</span>
+                                    <strong>Industrial Decline</strong>
+                                    <p>
+                                        Manufacturing exodus leaves unemployment
+                                        above 80%. Community endures.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="inv-tl-item historical">
+                                <div class="inv-tl-dot"></div>
+                                <div class="inv-tl-content">
+                                    <span class="inv-tl-date">2015</span>
+                                    <strong>SEZ Designation</strong>
+                                    <p>
+                                        South African government designates
+                                        Atlantis as a green technology Special
+                                        Economic Zone
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="inv-tl-item historical">
+                                <div class="inv-tl-dot"></div>
+                                <div class="inv-tl-content">
+                                    <span class="inv-tl-date">2018</span>
+                                    <strong>Infrastructure Development</strong>
+                                    <p>
+                                        Civil infrastructure works completed.
+                                        First development-ready plots serviced.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="inv-tl-item historical">
+                                <div class="inv-tl-dot"></div>
+                                <div class="inv-tl-content">
+                                    <span class="inv-tl-date">2020</span>
+                                    <strong>First Anchor Tenants</strong>
+                                    <p>
+                                        First green manufacturing companies
+                                        establish operations in the zone
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="inv-tl-item current">
+                                <div class="inv-tl-dot pulse-dot"></div>
+                                <div class="inv-tl-content">
+                                    <span class="inv-tl-date">2026 — NOW</span>
+                                    <strong>Atlantis Capital Live</strong>
+                                    <p>
+                                        Digital infrastructure platform
+                                        launched. 47 companies. R8.2bn
+                                        committed. 3,840 jobs.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="inv-tl-item projected">
+                                <div class="inv-tl-dot"></div>
+                                <div class="inv-tl-content">
+                                    <span class="inv-tl-date">2028</span>
+                                    <strong>Phase 2 Completion</strong>
+                                    <p>
+                                        Full Zone C development. Target: 70
+                                        companies, 7,000 direct jobs.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="inv-tl-item projected">
+                                <div class="inv-tl-dot"></div>
+                                <div class="inv-tl-content">
+                                    <span class="inv-tl-date">2030</span>
+                                    <strong>Full Build-Out Target</strong>
+                                    <p>
+                                        12,400 jobs. R15bn+ investment. Africa's
+                                        leading green manufacturing hub.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════════════════════════════════════════════ ENGAGE ═══ -->
+            <section class="inv-engage" id="engage">
+                <div class="inv-container">
+                    <div class="inv-section-header animate-up">
+                        <div class="inv-section-label">ENGAGE &amp; INVEST</div>
+                        <h2 class="inv-section-title">
+                            Ready to Be Part of<br />What's Being Built?
+                        </h2>
+                        <p class="inv-section-sub">
+                            Choose your next step. Every engagement pathway
+                            leads to the same place — a more prosperous, more
+                            sustainable Atlantis.
+                        </p>
+                    </div>
+
+                    <div class="inv-engage-grid">
+                        <div class="inv-engage-card primary-engage animate-up">
+                            <div class="inv-engage-icon">
+                                <i data-feather="user-plus"></i>
+                            </div>
+                            <h3>Create an Investor Account</h3>
+                            <p>
+                                Access the full investor dashboard — live data,
+                                detailed reports, investment briefs, and the
+                                ability to formally register interest in
+                                specific development opportunities.
+                            </p>
+                            <a href="portal.html" class="inv-engage-cta solid"
+                                >Create Investor Account</a
+                            >
+                        </div>
+                        <div class="inv-engage-card animate-up">
+                            <div class="inv-engage-icon">
+                                <i data-feather="mail"></i>
+                            </div>
+                            <h3>Contact ASEZCo Directly</h3>
+                            <p>
+                                Establish operations, formalise a partnership,
+                                or have a direct conversation with the team. We
+                                respond to all enquiries within two business
+                                days.
+                            </p>
+                            <button
+                                class="inv-engage-cta outline"
+                                onclick="openContactModal()"
+                            >
+                                Contact ASEZCo
+                            </button>
+                        </div>
+                        <div class="inv-engage-card animate-up">
+                            <div class="inv-engage-icon">
+                                <i data-feather="file-text"></i>
+                            </div>
+                            <h3>Download the Impact Report</h3>
+                            <p>
+                                Access the full ASEZCo annual impact report —
+                                detailed data, case studies, and performance
+                                analysis for researchers, journalists, and
+                                government partners.
+                            </p>
+                            <button
+                                class="inv-engage-cta outline"
+                                onclick="downloadReport(event)"
+                            >
+                                Download Impact Report
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Contact details -->
+                    <div class="inv-contact-strip animate-up">
+                        <div class="inv-contact-item">
+                            <i data-feather="map-pin"></i>
+                            <div>
+                                <strong>ASEZCo Offices</strong
+                                ><span
+                                    >Atlantis SEZ, Atlantis, Western Cape,
+                                    7349</span
+                                >
+                            </div>
+                        </div>
+                        <div class="inv-contact-item">
+                            <i data-feather="phone"></i>
+                            <div>
+                                <strong>+27 21 573 0000</strong
+                                ><span>Mon – Fri, 08:00 – 17:00 SAST</span>
+                            </div>
+                        </div>
+                        <div class="inv-contact-item">
+                            <i data-feather="mail"></i>
+                            <div>
+                                <strong>invest@asezco.gov.za</strong
+                                ><span
+                                    >For investment and partnership
+                                    enquiries</span
+                                >
+                            </div>
+                        </div>
+                        <div class="inv-contact-item">
+                            <i data-feather="globe"></i>
+                            <div>
+                                <a
+                                    href="https://www.asezco.gov.za"
+                                    target="_blank"
+                                    rel="noopener"
+                                    ><strong>www.asezco.gov.za</strong></a
+                                ><span>Official ASEZCo website</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Login panel -->
+                    <div class="inv-login-panel animate-up" id="loginPanel">
+                        <button
+                            class="inv-login-toggle"
+                            id="loginToggle"
+                            onclick="toggleLoginPanel()"
+                        >
+                            <i data-feather="log-in"></i>
+                            <span>Already have an account? Login</span>
+                            <i
+                                data-feather="chevron-down"
+                                class="inv-login-chevron"
+                                id="loginChevron"
+                            ></i>
+                        </button>
+                        <div
+                            class="inv-login-form"
+                            id="loginForm"
+                            style="display: none"
+                        >
+                            <form onsubmit="handleLogin(event)">
+                                <div class="inv-form-row">
+                                    <div class="inv-field">
+                                        <label for="loginEmail"
+                                            >Email address</label
+                                        >
+                                        <input
+                                            type="email"
+                                            id="loginEmail"
+                                            name="email"
+                                            placeholder="you@organisation.com"
+                                            autocomplete="email"
+                                            required
+                                        />
+                                        <span
+                                            class="inv-field-error"
+                                            id="loginEmailErr"
+                                        ></span>
+                                    </div>
+                                    <div class="inv-field">
+                                        <label for="loginPassword"
+                                            >Password</label
+                                        >
+                                        <input
+                                            type="password"
+                                            id="loginPassword"
+                                            name="password"
+                                            placeholder="Your password"
+                                            autocomplete="current-password"
+                                            required
+                                        />
+                                        <span
+                                            class="inv-field-error"
+                                            id="loginPassErr"
+                                        ></span>
+                                    </div>
+                                </div>
+                                <div class="inv-login-actions">
+                                    <button type="submit" class="inv-btn-solid">
+                                        Login
+                                    </button>
+                                    <a href="#" class="inv-login-forgot"
+                                        >Forgot password?</a
+                                    >
+                                    <a
+                                        href="portal.html"
+                                        class="inv-login-create"
+                                        >Create account</a
+                                    >
+                                </div>
+                                <p class="inv-login-note">
+                                    ASEZCo staff logging in here are
+                                    automatically routed to the staff admin
+                                    environment based on their credentials.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ═══════════════════════════════════════════════════════ FOOTER ═══ -->
+        <footer class="inv-footer">
+            <div class="inv-footer-inner">
+                <div class="inv-footer-brand">
+                    <span class="inv-footer-name">Atlantis Capital</span>
+                    <p>
+                        The digital hub of the Atlantis Special Economic Zone —
+                        connecting talent, enterprise, and investment in
+                        Africa's green industrial future.
+                    </p>
+                </div>
+                <div class="inv-footer-links">
+                    <a href="index.html">Platform Home</a>
+                    <a href="#story">The Story</a>
+                    <a href="#data">Impact Data</a>
+                    <a href="#opportunity">Invest</a>
+                    <a href="#engage">Contact</a>
+                </div>
+                <div class="inv-footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a
+                        href="https://www.asezco.gov.za"
+                        target="_blank"
+                        rel="noopener"
+                        >ASEZCo.gov.za</a
+                    >
+                </div>
+            </div>
+            <div class="inv-footer-bottom">
+                <p>
+                    &copy; 2026 Atlantis Special Economic Zone Company (ASEZCo).
+                    All rights reserved. An initiative of the Department of
+                    Trade, Industry and Competition.
+                </p>
+            </div>
+        </footer>
+
+        <!-- Contact Modal -->
+        <div
+            class="inv-modal-overlay"
+            id="contactModal"
+            aria-modal="true"
+            role="dialog"
+            aria-label="Contact ASEZCo"
+            style="display: none"
+        >
+            <div class="inv-modal-box">
+                <button
+                    class="inv-modal-close"
+                    onclick="closeContactModal()"
+                    aria-label="Close contact form"
+                >
+                    <i data-feather="x"></i>
+                </button>
+                <h3>Contact ASEZCo</h3>
+                <p>
+                    Complete this form and our investment team will respond
+                    within two business days.
+                </p>
+                <form
+                    class="inv-contact-form"
+                    onsubmit="submitContactForm(event)"
+                >
+                    <div class="inv-form-row-2">
+                        <div class="inv-field">
+                            <label for="cfName">Full Name *</label>
+                            <input
+                                type="text"
+                                id="cfName"
+                                required
+                                placeholder="Your full name"
+                            />
+                            <span class="inv-field-error" id="cfNameErr"></span>
+                        </div>
+                        <div class="inv-field">
+                            <label for="cfOrg">Organisation *</label>
+                            <input
+                                type="text"
+                                id="cfOrg"
+                                required
+                                placeholder="Your organisation"
+                            />
+                        </div>
+                    </div>
+                    <div class="inv-form-row-2">
+                        <div class="inv-field">
+                            <label for="cfRole">Role / Title</label>
+                            <input
+                                type="text"
+                                id="cfRole"
+                                placeholder="Your role"
+                            />
+                        </div>
+                        <div class="inv-field">
+                            <label for="cfCountry">Country *</label>
+                            <input
+                                type="text"
+                                id="cfCountry"
+                                required
+                                placeholder="Country of operation"
+                            />
+                        </div>
+                    </div>
+                    <div class="inv-field">
+                        <label for="cfEmail">Email Address *</label>
+                        <input
+                            type="email"
+                            id="cfEmail"
+                            required
+                            placeholder="you@organisation.com"
+                        />
+                        <span class="inv-field-error" id="cfEmailErr"></span>
+                    </div>
+                    <div class="inv-field">
+                        <label for="cfInterest">Nature of Interest *</label>
+                        <select id="cfInterest" required>
+                            <option value="">Select…</option>
+                            <option>Manufacturing Investment</option>
+                            <option>Supply Chain / Services</option>
+                            <option>Research &amp; Partnership</option>
+                            <option>Development Finance</option>
+                            <option>Media / Journalism</option>
+                            <option>Government Partnership</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="inv-field">
+                        <label for="cfMessage">Brief Message *</label>
+                        <textarea
+                            id="cfMessage"
+                            required
+                            rows="4"
+                            placeholder="Tell us briefly about your interest in the Atlantis SEZ…"
+                        ></textarea>
+                        <span class="inv-field-error" id="cfMessageErr"></span>
+                    </div>
+                    <button type="submit" class="inv-btn-solid inv-btn-full">
+                        Send Enquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <script src="investor-landing.js"></script>
+    </body>
+</html>
