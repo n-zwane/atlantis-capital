@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Investor Login — Atlantis Capital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        :root {
+            --teal: #0f9f68; --teal-hover: #0c8556;
+            --teal-glow: rgba(15,159,104,0.12); --teal-border: rgba(15,159,104,0.3);
+            --amber-light: #fbbf24;
+            --charcoal: #0f1a1c; --charcoal-card: #1b2e31; --charcoal-line: rgba(255,255,255,0.06);
+            --white: #ffffff; --text-muted: #526668;
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+            --ease: cubic-bezier(0.16,1,0.3,1);
+        }
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+        html{font-size:16px;}
+        body{font-family:var(--font-body);background:var(--charcoal);color:rgba(255,255,255,0.85);line-height:1.65;min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+        .bg-canvas{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;}
+        .bg-gradient{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 20% 40%,rgba(15,159,104,0.08) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 80% 70%,rgba(217,119,6,0.05) 0%,transparent 50%),linear-gradient(180deg,#0a1214 0%,#0f1a1c 50%,#111e21 100%);}
+        .bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(15,159,104,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(15,159,104,0.04) 1px,transparent 1px);background-size:60px 60px;}
+        .bg-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.35;animation:orbFloat 12s ease-in-out infinite;}
+        .bg-orb-1{width:500px;height:500px;background:rgba(15,159,104,0.15);top:-150px;left:-100px;}
+        .bg-orb-2{width:400px;height:400px;background:rgba(217,119,6,0.08);bottom:-100px;right:-100px;animation-delay:-6s;}
+        @keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1);}33%{transform:translate(30px,-20px) scale(1.05);}66%{transform:translate(-20px,15px) scale(0.97);}}
+        .auth-nav{position:relative;z-index:10;padding:1.5rem 2rem;display:flex;align-items:center;justify-content:space-between;}
+        .auth-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;}
+        .auth-brand-name{font-family:var(--font-display);font-size:1.35rem;font-weight:700;color:var(--white);letter-spacing:-.03em;}
+        .auth-nav-back{display:flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--text-muted);text-decoration:none;transition:color .2s;}
+        .auth-nav-back:hover{color:var(--teal);}
+        .auth-nav-back svg{width:14px;height:14px;}
+        .auth-main{position:relative;z-index:10;flex:1;display:flex;align-items:center;justify-content:center;padding:2rem;}
+        .auth-split{display:grid;grid-template-columns:1fr 480px;gap:4rem;max-width:1100px;width:100%;align-items:center;}
+        .auth-story{padding-right:2rem;}
+        .auth-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-mono);font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:1.5rem;}
+        .auth-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);animation:pulse 2.5s infinite;}
+        @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.4);}}
+        .auth-story h1{font-family:var(--font-display);font-size:clamp(2rem,3.5vw,3rem);font-weight:700;color:var(--white);line-height:1.15;letter-spacing:-.03em;margin-bottom:1.25rem;}
+        .auth-story h1 em{color:var(--teal);font-style:italic;font-weight:400;}
+        .auth-story p{font-size:.95rem;color:var(--text-muted);line-height:1.8;max-width:420px;margin-bottom:2.5rem;}
+        .auth-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+        .auth-stat{background:var(--charcoal-card);border:1px solid var(--charcoal-line);border-radius:10px;padding:1.1rem 1.25rem;transition:border-color .3s ease;}
+        .auth-stat:hover{border-color:var(--teal-border);}
+        .auth-stat-num{display:block;font-family:var(--font-display);font-size:1.65rem;font-style:italic;color:var(--amber-light);line-height:1;margin-bottom:.25rem;}
+        .auth-stat-lbl{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);}
+        .auth-card{background:var(--charcoal-card);border:1px solid var(--charcoal-line);border-radius:20px;padding:2.75rem;box-shadow:0 32px 80px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.03);animation:cardReveal .7s var(--ease) both;}
+        @keyframes cardReveal{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+        .auth-card-header{margin-bottom:2rem;}
+        .auth-card-title{font-family:var(--font-display);font-size:1.6rem;font-weight:700;color:var(--white);letter-spacing:-.02em;margin-bottom:.4rem;}
+        .auth-card-sub{font-size:.85rem;color:var(--text-muted);}
+        .auth-form{display:flex;flex-direction:column;}
+        .field{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.1rem;}
+        .field label{font-size:.78rem;font-weight:600;color:rgba(255,255,255,.6);letter-spacing:.02em;}
+        .field-wrap{position:relative;}
+        .field-icon{position:absolute;left:.9rem;top:50%;transform:translateY(-50%);color:var(--text-muted);pointer-events:none;transition:color .2s;}
+        .field-icon svg{width:15px;height:15px;}
+        .field input{width:100%;padding:.75rem .9rem .75rem 2.6rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:.9rem;transition:border-color .2s,box-shadow .2s,background .2s;outline:none;}
+        .field input::placeholder{color:rgba(255,255,255,.25);}
+        .field input:focus{border-color:var(--teal);background:rgba(15,159,104,.06);box-shadow:0 0 0 3px rgba(15,159,104,.12);}
+        .field-wrap:focus-within .field-icon{color:var(--teal);}
+        .field input.error{border-color:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,.1);}
+        .field-error{font-size:.72rem;color:#f87171;min-height:1em;}
+        .field-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;}
+        .checkbox-wrap{display:flex;align-items:center;gap:.6rem;cursor:pointer;}
+        .checkbox-wrap input[type="checkbox"]{display:none;}
+        .checkbox-custom{width:18px;height:18px;border:1.5px solid rgba(255,255,255,.15);border-radius:4px;background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0;}
+        .checkbox-wrap input:checked + .checkbox-custom{background:var(--teal);border-color:var(--teal);}
+        .checkbox-custom svg{width:10px;height:10px;color:white;display:none;}
+        .checkbox-wrap input:checked + .checkbox-custom svg{display:block;}
+        .checkbox-label{font-size:.82rem;color:var(--text-muted);}
+        .forgot-link{font-size:.82rem;color:var(--teal);text-decoration:none;transition:color .2s;}
+        .forgot-link:hover{color:var(--amber-light);}
+        .btn-primary{width:100%;padding:.9rem;background:var(--teal);color:var(--white);border:none;border-radius:8px;font-family:var(--font-display);font-size:.95rem;font-weight:600;cursor:pointer;transition:all .25s var(--ease);display:flex;align-items:center;justify-content:center;gap:.6rem;margin-bottom:1.5rem;letter-spacing:-.01em;}
+        .btn-primary:hover{background:var(--teal-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(15,159,104,.35);}
+        .btn-primary svg{width:16px;height:16px;}
+        .btn-primary.loading{opacity:.7;pointer-events:none;}
+        .auth-divider{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;color:rgba(255,255,255,.15);font-size:.75rem;font-family:var(--font-mono);letter-spacing:.06em;}
+        .auth-divider::before,.auth-divider::after{content:'';flex:1;height:1px;background:rgba(255,255,255,.07);}
+        .auth-footer-links{text-align:center;font-size:.85rem;color:var(--text-muted);}
+        .auth-footer-links a{color:var(--teal);text-decoration:none;font-weight:600;transition:color .2s;}
+        .auth-footer-links a:hover{color:var(--amber-light);}
+        .auth-success{display:none;text-align:center;padding:1rem 0;}
+        .auth-success-icon{width:56px;height:56px;background:var(--teal-glow);border:1px solid var(--teal-border);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;}
+        .auth-success-icon svg{width:24px;height:24px;color:var(--teal);}
+        .auth-success h3{font-family:var(--font-display);font-size:1.25rem;color:var(--white);margin-bottom:.5rem;}
+        .auth-success p{font-size:.85rem;color:var(--text-muted);}
+        .auth-page-footer{position:relative;z-index:10;text-align:center;padding:1.5rem 2rem;font-size:.75rem;color:rgba(82,102,104,.6);}
+        .forgot-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);z-index:999;display:none;align-items:center;justify-content:center;padding:2rem;}
+        .forgot-box{background:var(--charcoal-card);border:1px solid var(--charcoal-line);border-radius:16px;padding:2.25rem;max-width:440px;width:100%;}
+        .forgot-box h3{font-family:var(--font-display);font-size:1.4rem;color:var(--white);margin-bottom:.5rem;letter-spacing:-.02em;}
+        .forgot-box p{font-size:.85rem;color:var(--text-muted);margin-bottom:1.75rem;}
+        .forgot-actions{display:flex;gap:.75rem;margin-top:.5rem;}
+        .btn-cancel{flex:1;padding:.75rem;background:transparent;border:1.5px solid rgba(255,255,255,.1);border-radius:8px;color:var(--text-muted);font-family:var(--font-body);font-size:.9rem;cursor:pointer;transition:all .2s;}
+        .btn-cancel:hover{border-color:rgba(255,255,255,.25);}
+        .btn-reset{flex:2;padding:.75rem;background:var(--teal);border:none;border-radius:8px;color:white;font-family:var(--font-display);font-size:.9rem;font-weight:600;cursor:pointer;transition:all .2s;}
+        .btn-reset:hover{background:var(--teal-hover);}
+        @media(max-width:900px){.auth-split{grid-template-columns:1fr;gap:2rem;}.auth-story{padding-right:0;}.auth-story h1{font-size:2rem;}.auth-card{padding:2rem;}}
+        @media(max-width:600px){.auth-nav{padding:1.25rem;}.auth-card{padding:1.75rem;border-radius:16px;}}
+        @keyframes spin{to{transform:rotate(360deg);}}
+    </style>
+</head>
+<body>
+    <div class="bg-canvas">
+        <div class="bg-gradient"></div>
+        <div class="bg-grid"></div>
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+    </div>
+
+    <nav class="auth-nav">
+        <a href="index.html" class="auth-brand">
+            <span class="auth-brand-name">Atlantis Capital</span>
+        </a>
+        <a href="index.html" class="auth-nav-back">
+            <i data-feather="arrow-left"></i>
+            Back to overview
+        </a>
+    </nav>
+
+    <main class="auth-main">
+        <div class="auth-split">
+            <div class="auth-story">
+                <div class="auth-eyebrow">
+                    <span class="auth-eyebrow-dot"></span>
+                    Investor Portal
+                </div>
+                <h1>Africa's green<br />industrial future<br /><em>starts here.</em></h1>
+                <p>Access real-time impact data, investment briefs, and development opportunities within the Atlantis SEZ — South Africa's leading green manufacturing hub.</p>
+                <div class="auth-stats">
+                    <div class="auth-stat"><span class="auth-stat-num">R8.2bn</span><span class="auth-stat-lbl">Committed Investment</span></div>
+                    <div class="auth-stat"><span class="auth-stat-num">47+</span><span class="auth-stat-lbl">Companies in Zone</span></div>
+                    <div class="auth-stat"><span class="auth-stat-num">3,840</span><span class="auth-stat-lbl">Jobs Created</span></div>
+                    <div class="auth-stat"><span class="auth-stat-num">84%</span><span class="auth-stat-lbl">Renewable Energy</span></div>
+                </div>
+            </div>
+
+            <div class="auth-card">
+                <div class="auth-card-header">
+                    <div class="auth-card-title">Welcome back</div>
+                    <div class="auth-card-sub">Sign in to your investor account</div>
+                </div>
+
+                <div id="loginSuccess" class="auth-success">
+                    <div class="auth-success-icon"><i data-feather="check"></i></div>
+                    <h3>Signed in successfully</h3>
+                    <p>Redirecting you to your dashboard…</p>
+                </div>
+
+                <form class="auth-form" id="loginForm" onsubmit="handleLogin(event)" novalidate>
+                    <div class="field">
+                        <label for="loginEmail">Email address</label>
+                        <div class="field-wrap">
+                            <span class="field-icon"><i data-feather="mail"></i></span>
+                            <input type="email" id="loginEmail" placeholder="you@organisation.com" autocomplete="email" required />
+                        </div>
+                        <span class="field-error" id="emailErr"></span>
+                    </div>
+                    <div class="field">
+                        <label for="loginPassword">Password</label>
+                        <div class="field-wrap">
+                            <span class="field-icon"><i data-feather="lock"></i></span>
+                            <input type="password" id="loginPassword" placeholder="Your password" autocomplete="current-password" required />
+                        </div>
+                        <span class="field-error" id="passErr"></span>
+                    </div>
+                    <div class="field-row">
+                        <label class="checkbox-wrap">
+                            <input type="checkbox" id="rememberMe" />
+                            <span class="checkbox-custom">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            <span class="checkbox-label">Remember me for 30 days</span>
+                        </label>
+                        <a href="#" class="forgot-link" onclick="handleForgotPassword(event)">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn-primary" id="loginBtn">
+                        <i data-feather="log-in"></i>
+                        Sign In
+                    </button>
+                    <div class="auth-divider">OR</div>
+                    <div class="auth-footer-links">
+                        Don't have an account? <a href="index.html">Create investor account &rarr;</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="auth-page-footer">
+        &copy; 2026 Atlantis Special Economic Zone Company (ASEZCo). An initiative of the Department of Trade, Industry and Competition.
+    </footer>
+
+    <div class="forgot-overlay" id="forgotModal">
+        <div class="forgot-box">
+            <h3>Reset your password</h3>
+            <p>Enter your registered email and we'll send you a secure reset link within a few minutes.</p>
+            <div class="field">
+                <label for="resetEmail">Email address</label>
+                <div class="field-wrap">
+                    <span class="field-icon"><i data-feather="mail"></i></span>
+                    <input type="email" id="resetEmail" placeholder="you@organisation.com" />
+                </div>
+            </div>
+            <div class="forgot-actions">
+                <button class="btn-cancel" onclick="closeForgot()">Cancel</button>
+                <button class="btn-reset" onclick="submitReset()">Send Reset Link</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => { feather.replace({'stroke-width':1.75}); });
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail');
+            const password = document.getElementById('loginPassword');
+            const emailErr = document.getElementById('emailErr');
+            const passErr = document.getElementById('passErr');
+            const btn = document.getElementById('loginBtn');
+            let valid = true;
+            emailErr.textContent=''; passErr.textContent='';
+            email.classList.remove('error'); password.classList.remove('error');
+            if (!email.value || !email.value.includes('@')) { emailErr.textContent='Please enter a valid email address.'; email.classList.add('error'); valid=false; }
+            if (!password.value || password.value.length < 6) { passErr.textContent='Password must be at least 6 characters.'; password.classList.add('error'); valid=false; }
+            if (valid) {
+                btn.classList.add('loading');
+                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation:spin 0.8s linear infinite"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg> Signing in\u2026';
+                setTimeout(() => {
+                    document.getElementById('loginForm').style.display='none';
+                    const s=document.getElementById('loginSuccess'); s.style.display='block';
+                    feather.replace({'stroke-width':1.75});
+                    setTimeout(() => { window.location.href='index.html'; }, 1800);
+                }, 1200);
+            }
+        }
+
+        function handleForgotPassword(e) {
+            e.preventDefault();
+            const m=document.getElementById('forgotModal'); m.style.display='flex';
+            feather.replace({'stroke-width':1.75});
+        }
+        function closeForgot() { document.getElementById('forgotModal').style.display='none'; }
+        function submitReset() {
+            const email=document.getElementById('resetEmail').value;
+            closeForgot();
+            const toast=document.createElement('div');
+            toast.textContent=email?'Password reset link sent to '+email+'. Please check your inbox.':'Please enter your email address.';
+            Object.assign(toast.style,{position:'fixed',bottom:'2rem',left:'50%',transform:'translateX(-50%)',background:'rgba(15,159,104,0.95)',color:'#fff',padding:'1rem 1.75rem',borderRadius:'10px',fontFamily:'Inter,sans-serif',fontSize:'.88rem',fontWeight:'500',maxWidth:'440px',textAlign:'center',boxShadow:'0 8px 32px rgba(0,0,0,.4)',zIndex:'9999',opacity:'0',transition:'opacity .3s ease,transform .3s ease',backdropFilter:'blur(8px)'});
+            document.body.appendChild(toast);
+            requestAnimationFrame(()=>{ toast.style.opacity='1'; toast.style.transform='translateX(-50%) translateY(-4px)'; });
+            setTimeout(()=>{ toast.style.opacity='0'; setTimeout(()=>document.body.removeChild(toast),400); },4000);
+        }
+        document.getElementById('forgotModal').addEventListener('click',(e)=>{ if(e.target===e.currentTarget) closeForgot(); });
+    </script>
+</body>
+</html>
