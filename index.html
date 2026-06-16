@@ -67,10 +67,7 @@
                 </nav>
 
                 <div class="inv-nav-actions">
-                    <a href="portal.html" class="inv-btn-ghost">Login</a>
-                    <a href="portal.html" class="inv-btn-solid"
-                        >Create Investor Account</a
-                    >
+                    <button class="inv-btn-solid" onclick="openInvestorApplyModal()">Enquire</button>
                 </div>
 
                 <button
@@ -122,18 +119,7 @@
                     >The Zone</a
                 >
                 <div class="inv-mobile-actions">
-                    <a
-                        href="portal.html"
-                        class="inv-btn-ghost inv-btn-full"
-                        onclick="closeMobileNav()"
-                        >Login</a
-                    >
-                    <a
-                        href="portal.html"
-                        class="inv-btn-solid inv-btn-full"
-                        onclick="closeMobileNav()"
-                        >Create Investor Account</a
-                    >
+                    <button class="inv-btn-solid inv-btn-full" onclick="closeMobileNav(); openInvestorApplyModal()">Enquire to Invest</button>
                 </div>
             </nav>
         </div>
@@ -2149,72 +2135,40 @@
             </div>
         </footer>
 
-        <!-- Contact Modal -->
+        <!-- Enquire to Invest Modal (MVP) -->
         <div
             class="inv-modal-overlay"
             id="contactModal"
             aria-modal="true"
             role="dialog"
-            aria-label="Contact ASEZCo"
+            aria-label="Enquire to Invest"
             style="display: none"
         >
             <div class="inv-modal-box">
                 <button
                     class="inv-modal-close"
                     onclick="closeContactModal()"
-                    aria-label="Close contact form"
+                    aria-label="Close apply form"
                 >
                     <i data-feather="x"></i>
                 </button>
-                <h3>Contact ASEZCo</h3>
+                <h3>Enquire to Invest</h3>
                 <p>
-                    Complete this form and our investment team will respond
-                    within two business days.
+                    Submit your name and email and an ASEZCo team member will
+                    contact you shortly.
                 </p>
-                <form
-                    class="inv-contact-form"
-                    onsubmit="submitContactForm(event)"
-                >
-                    <div class="inv-form-row-2">
-                        <div class="inv-field">
-                            <label for="cfName">Full Name *</label>
-                            <input
-                                type="text"
-                                id="cfName"
-                                required
-                                placeholder="Your full name"
-                            />
-                            <span class="inv-field-error" id="cfNameErr"></span>
-                        </div>
-                        <div class="inv-field">
-                            <label for="cfOrg">Organisation *</label>
-                            <input
-                                type="text"
-                                id="cfOrg"
-                                required
-                                placeholder="Your organisation"
-                            />
-                        </div>
+                <form class="inv-contact-form" onsubmit="submitContactForm(event)">
+                    <div class="inv-field">
+                        <label for="cfName">Full Name *</label>
+                        <input
+                            type="text"
+                            id="cfName"
+                            required
+                            placeholder="Your full name"
+                        />
+                        <span class="inv-field-error" id="cfNameErr"></span>
                     </div>
-                    <div class="inv-form-row-2">
-                        <div class="inv-field">
-                            <label for="cfRole">Role / Title</label>
-                            <input
-                                type="text"
-                                id="cfRole"
-                                placeholder="Your role"
-                            />
-                        </div>
-                        <div class="inv-field">
-                            <label for="cfCountry">Country *</label>
-                            <input
-                                type="text"
-                                id="cfCountry"
-                                required
-                                placeholder="Country of operation"
-                            />
-                        </div>
-                    </div>
+
                     <div class="inv-field">
                         <label for="cfEmail">Email Address *</label>
                         <input
@@ -2225,31 +2179,19 @@
                         />
                         <span class="inv-field-error" id="cfEmailErr"></span>
                     </div>
+
                     <div class="inv-field">
-                        <label for="cfInterest">Nature of Interest *</label>
-                        <select id="cfInterest" required>
-                            <option value="">Select…</option>
-                            <option>Manufacturing Investment</option>
-                            <option>Supply Chain / Services</option>
-                            <option>Research &amp; Partnership</option>
-                            <option>Development Finance</option>
-                            <option>Media / Journalism</option>
-                            <option>Government Partnership</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                    <div class="inv-field">
-                        <label for="cfMessage">Brief Message *</label>
+                        <label for="cfMessage">Optional message</label>
                         <textarea
                             id="cfMessage"
-                            required
-                            rows="4"
-                            placeholder="Tell us briefly about your interest in the Atlantis SEZ…"
+                            rows="3"
+                            placeholder="Optional — a short note for ASEZCo"
                         ></textarea>
                         <span class="inv-field-error" id="cfMessageErr"></span>
                     </div>
+
                     <button type="submit" class="inv-btn-solid inv-btn-full">
-                        Send Enquiry
+                        Submit Interest
                     </button>
                 </form>
             </div>

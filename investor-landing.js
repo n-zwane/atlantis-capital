@@ -726,6 +726,11 @@ function openContactForm(opportunity) {
     openContactModal(opportunity);
 }
 
+// Open the simplified 'Apply to Invest' modal (MVP)
+function openInvestorApplyModal() {
+    openContactModal();
+}
+
 function submitContactForm(e) {
     e.preventDefault();
     const name = document.getElementById("cfName");
@@ -749,23 +754,18 @@ function submitContactForm(e) {
         email.classList.add("error");
         valid = false;
     }
-    if (message.value.trim().length < 10) {
-        messageErr.textContent = "Please provide a brief message.";
-        message.classList.add("error");
-        valid = false;
-    }
 
     if (valid) {
         const btn = e.target.querySelector("[type=submit]");
-        btn.textContent = "Sending…";
+        btn.textContent = "Submitting…";
         btn.disabled = true;
         setTimeout(() => {
             closeContactModal();
             showToast(
-                "Your enquiry has been sent. The ASEZCo investment team will be in touch within two business days.",
+                "Application sent — ASEZCo staff will be in contact with you shortly.",
             );
             e.target.reset();
-            btn.textContent = "Send Enquiry";
+            btn.textContent = "Submit Application";
             btn.disabled = false;
         }, 1200);
     }
